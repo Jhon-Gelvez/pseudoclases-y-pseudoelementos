@@ -1,0 +1,44 @@
+/* ejercicio1 */
+.boton {
+    background-color: #fff;
+}
+
+.boton:hover {
+    background-color: #08875f;
+}
+
+/* ejercicio 2 */
+
+.parrafo::first-letter {
+    font-size: 40px;
+    font-family: sans-serif;
+    color: #f00;
+}
+
+/* ejercicio3 */
+.encabezado::before {
+    content:  "♥";
+}
+/* ejercicio4 */
+input#nombre:focus {
+    border: #f00 solid 2px;
+    box-shadow: #f00 0 0 15px;
+    outline: none;
+}
+/* ejercicio5 */
+ul > li:first-child {
+    color: rgb(5, 92, 61);
+}
+ul > li:nth-child(2){
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: double;
+}
+ul > li:nth-child(3) {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+
+ul > li:last-child {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: #fff 1px 0 20px;
+}
