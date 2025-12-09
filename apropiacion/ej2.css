@@ -1,0 +1,57 @@
+/* estilos para el body y elementos en general */
+* {
+    background-color: #444;
+    color: #ddd;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* diseño para los elementos dentro del contenedor */
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+/* estilos generales para li */
+li {
+    font-size: 20px;
+    margin: 20px;
+}
+
+/* :first-child, :last-child y :nth-child(). */
+
+/* permite seleccionar elementos basandose en su posicion respecto de su contenedor */
+
+
+/* selecciona al hijo (li) que sea el primer hijo */
+/* añade un color  y un tipo de cursor */
+li:first-child {
+    color: #fff;
+    cursor: grab;
+}
+
+/* añade un color  y un tipo de cursor */
+li:nth-child(2) {
+    color: #48e;
+    cursor: wait;
+}
+
+/* añade un color  y un tipo de cursor */
+li:nth-child(3) {
+    color: #c71212;
+    cursor: cell;
+}
+
+/* añade un color  y un tipo de cursor */
+li:nth-child(4) {
+    color: rgb(9, 132, 36);
+    cursor: all-scroll;
+}
+
+/* añade un color  y un tipo de cursor */
+li:last-child {
+    color: #000;
+    cursor: pointer;
+}

@@ -1,0 +1,29 @@
+/* estilos para el body y elementos en general */
+* {
+    background-color: #444;
+    color: #ddd;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* centrar y darle espacio al parrafo  */
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+p::first-letter {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    color: #f00;
+}
+
+p::first-line {
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: sans-serif;
+}

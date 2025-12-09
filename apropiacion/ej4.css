@@ -1,0 +1,44 @@
+/* estilos para el body y elementos en general */
+* {
+    background-color: #444;
+    color: #ddd;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* centramos el titulo y lo separamos */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+/* cambia el color al estar seleccionado */
+h1::selection {
+    text-align: center;
+    background-color: #4818d8;
+}
+
+h1::before {
+    content:  "♥";
+    width: 30px;
+    height: 30px;
+    color: #d92929;
+    margin-right: 10px;
+}
+
+h1::after {
+    content:  "♥";
+    width: 30px;
+    height: 30px;
+    color: #d92929;
+    margin-left: 10px;
+}
+p {
+    margin: auto;
+    padding: 40px;
+}

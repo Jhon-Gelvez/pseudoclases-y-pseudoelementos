@@ -1,0 +1,64 @@
+/* estilos para el body y elementos en general */
+* {
+    background-color: #444;
+    color: #ddd;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* estilos para el layaout de los botones */
+.contenedor_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/* estilos generales para los botones */
+button {
+    width: 100px;
+    height: 100px;
+    background-color: #777;
+    margin: 20px;
+    border: none;
+    border-radius: 6px;
+}
+/*al pasar el mouse por encima aumeta su tamaño */
+#boton1:hover {
+    transform: scale(1.3);
+}
+/* cuando esta seleccionado agreaga un borde y cambia el color */
+#boton1:focus {
+    border: 5px #000 solid;
+    background-color: #fff;
+}
+/* cuando se presiona cambia el borde */
+#boton1:active {
+    border: 5px #000 dashed;
+}
+/* cuando se pada el mouse por encima disminuye su tamaño */
+#boton2:hover {
+    transform: scale(0.7);
+}
+/* cuando se selecciona emite luz */
+#boton2:focus {
+    box-shadow: #fff 0 0 75px;
+}
+/* cuando se mantiene el click cambia su color */
+#boton2:active {
+    background-color: #ddd;
+    color: #444;
+    border-radius: 9px;
+}
+/* cuando se pasa el mouse por encima cambia su fondo */
+#boton3:hover {
+    background: linear-gradient(45deg, #f00, #04326b, #8962e3);
+}
+/* cuando se selecciona emite luz de color rosa */
+#boton3:focus {
+    box-shadow: rgb(242, 27, 160) 0 0 40px;
+}
+/* cuando recibe un click se hace mas pequeño */
+#boton3:active {
+    transform: scale(0.88) translateY(2px);
+    transition: transform 0.05s ease-out;
+}
