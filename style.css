@@ -1,0 +1,215 @@
+/* estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #c9c9c9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* gradiente de fondo al body */
+body {
+    background: linear-gradient(to bottom, #121212 0%, #222 20%, #292929 40%, #292929 60%, #222 80%, #121212 100%);
+}
+
+/* centrar el contenido principal */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 70dvw;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* muestra una tarjeta con el resumen */
+h1 {
+    position: relative;
+    user-select: none;
+}
+
+h1::after {
+    content: "👈 click";
+    font-size: initial;
+    position: absolute;
+    width: 100px;
+
+    top: 50%;
+   
+    transform: translate(-0%, -50%);
+}
+
+h1:active::before {
+    position: absolute;
+    content: "1 procesador, 2 placa base, 3 memoria ram, 4 almacenamiento solido, 5 fuente de poder, 6 gabinete";
+    bottom: 0;
+    left: 50%;
+    height: auto;
+    padding: 9px;
+    width: 300px;
+    background-color: #ddd;
+    color: #444;
+    font-size: 1rem;
+
+    transform: translate(-50%, 120%);
+    z-index: 20;
+}
+/* separacion  entre los contenidos*/
+article {
+    margin: 30px;
+}
+/* separacion los titulos de las imagenes */
+h2 {
+    text-shadow: #ddd 0 0 5px;
+    color: #d21d23;
+    margin: 12px;
+}
+
+/* contenedor  de las img*/
+div.div_animacion {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    
+    cursor: pointer;
+    outline: none;
+}
+/* dimenciones para las imagenes */
+/* sombra para dar profundidad */
+img {
+    width: 150px;
+    height: 150px;
+    box-shadow: #000000 10px 10px 40px;
+    border: #868686 solid 4px;
+    position: relative;
+}
+
+div.div_animacion::after {
+    content: "👈 click";
+    position: absolute;
+    width: 90px;
+    top: 50%;
+    margin-left: 20px;
+}
+
+div.div_animacion:focus img {
+    border: none;
+}
+
+/* en focus brilla */
+div.div_animacion:focus {
+    box-shadow: #fff 0 0 80px;
+}
+
+/* focus a la img muestra la animacion */
+div.div_animacion:focus::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    box-sizing: content-box;
+    padding: 6px;
+    z-index: -10;
+
+    /* Centrado con top/left 50% + transform */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background: conic-gradient(from var(--angulo), #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    animation: girar 2s linear infinite;
+}
+/* tira led rgb */
+@property --angulo {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+/* animacion rgb */
+
+@keyframes girar {
+    0% {
+        --angulo: 0deg;
+    }
+    100% {
+        --angulo: 360deg;
+    }
+}
+/* decorado de linea para el h3 */
+h3::first-line {
+    text-decoration: underline;
+}
+
+/* espacio entre parrafos */
+p {
+    margin: 12px;
+    width: 50dvw;
+    text-align: left;
+}
+/* primera letra mas grande */
+p::first-letter {
+    font-size: 1.5rem;
+}
+
+/* zoom al poner el raton en el parrafo */
+p.p_zoom:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: #000 0 0 80px;
+}
+
+
+/* separacion entre la lista */
+.ol_lista_procesadores {
+    margin-top: 20px;
+}
+/* separacion entre list items */
+.ol_lista_procesadores > li {
+    color: #d1d1d1;
+    width: fit-content;
+    margin: 6px auto 6px auto;
+}
+/* cambio de color al contador */
+.ol_lista_procesadores > li::marker {
+    color: #f22d33;
+}
+/* emoji a la derecha de los li 1, 2 y 3 */
+.ol_lista_procesadores > li:first-child::after {
+    content: "✅";
+    margin-left: 6px;
+}
+.ol_lista_procesadores > li:nth-child(2)::after {
+    content: "✅";
+    margin-left: 6px;
+}
+.ol_lista_procesadores > li:nth-child(3)::after {
+    content: "✅";
+    margin-left: 6px;
+}
+/* cambio de color al pasar por encima el raton */
+.ol_lista_procesadores > li:hover {
+    color: #f00;
+    cursor: pointer;
+}
+/* cambio de color al pasar por encima el raton */
+.ol_lista_procesadores > li:hover::marker {
+    color: #ddd;
+}
+/* footer */
+footer {
+    width: 100%;
+    background-color: #121212;
+    padding: 14px;
+    margin-top: 30px;
+    box-shadow: #000 0 0 40px;
+}
+/* organizacion del footer */
+footer > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
