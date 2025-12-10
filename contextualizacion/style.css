@@ -1,6 +1,22 @@
+* {
+    background-color: #444;
+    color: #ddd;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 40px;
+
+}
+h2 {
+    margin: 20px;
+    color: #121212;
+}
+
 /* ejercicio1 */
 .boton {
     background-color: #fff;
+    color: #444;
 }
 
 .boton:hover {
@@ -16,8 +32,19 @@
 }
 
 /* ejercicio3 */
+.encabezado {
+    color: #ddd;
+    margin: 0;
+}
 .encabezado::before {
     content:  "♥";
+    color: #f00;
+    margin-right: 9px;
+}
+.encabezado::after {
+    content:  "♥";
+    color: #f00;
+    margin-left: 9px;
 }
 /* ejercicio4 */
 input#nombre:focus {
@@ -27,7 +54,7 @@ input#nombre:focus {
 }
 /* ejercicio5 */
 ul > li:first-child {
-    color: rgb(5, 92, 61);
+    color: rgb(10, 173, 116);
 }
 ul > li:nth-child(2){
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
